@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Для тебя ❤️</title>
+    <style>
+        body {
+            background-color: #ffdae9;
+            background-image: radial-gradient(#ffffff 20%, transparent 20%);
+            background-size: 25px 25px;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Окошко с письмом */
+        .letter-window {
+            width: 1000px;
+            height: 700px;
+            background: white;
+            border: 4px solid #ffb7c5;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 10px 10px 0px #ffb7c5;
+            z-index: 100;
+            max-width: 1500px;
+            max-height: 1500px;
+            overflow: auto;
+        }
+
+        /* Стиль для гифок вокруг */
+        .floating-gif {
+            position: absolute;
+            z-index: 1;
+            animation: bounce 3s infinite ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Раскидываем 5 гифок по углам */
+        .g1 { top: 5%; left: 5%; width: 120px; }
+        .g2 { top: 10%; right: 5%; width: 100px; animation-delay: 0.5s; }
+        .g3 { bottom: 10%; left: 10%; width: 130px; animation-delay: 1s; }
+        .g4 { bottom: 5%; right: 10%; width: 110px; animation-delay: 1.5s; }
+        .g5 { top: 50%; right: 2%; width: 90px; animation-delay: 2s; }
+    </style>
+</head>
+<body>
+
+    <img src="gifs/1.gif" class="floating-gif g1">
+    <img src="gifs/2.gif" class="floating-gif g2">
+    <img src="gifs/3.gif" class="floating-gif g3">
+    <img src="gifs/4.gif" class="floating-gif g4">
+    <img src="gifs/5.gif" class="floating-gif g5">
+
+    <div class="letter-window">
+        <h1 style="color: #ff4d6d;">Ура! ❤️</h1>
+        <p style="color: #ff85a2; font-size: 18px;">
+            Я счастлив нахуй <br><br>
+            Тут мог быть твой длинный текст, но я еще не придумал, че мне написать.
+        </p>
+        <img src="gifs/main-heart.gif" style="width: 150px; margin-top: 20px;">
+    </div>
+
+</body>
+</html>
